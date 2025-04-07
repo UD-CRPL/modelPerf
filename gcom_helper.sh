@@ -5,12 +5,6 @@
 # Usage: ./gcom_helper.sh [git|build]
 #   git   - Clone the GCoM repository into the current directory (creates a 'gcom' folder).
 #   build - Build gzstream, Boost Serialization, and compile the GCoM project.
-#
-# Note: Run this script from the 'src' directory of the modelPerf repository.
-#       (This ensures the cloned repository is placed in ./gcom and can be built there.)
-#
-# If running in a batch job or non-interactive shell, use a login shell for modules:
-# e.g., change the shebang to #!/bin/bash -l to ensure 'module' commands work.
 
 set -e
 
