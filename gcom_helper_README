@@ -1,0 +1,37 @@
+1. Load required modules 
+
+   module load nvhpc-hcpx-cuda12/25.1
+   module load gcc/12.2.0
+
+2. set up cuda environment 
+
+   export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.1/compilers/bin:$PATH
+   export CUDA_INSTALL_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.1/compilers
+
+3. In home directory run 
+
+       wget https://www.x.org/releases/individual/proto/xproto-7.0.31.tar.gz
+       tar -xzf xproto-7.0.31.tar.gz
+       cd xproto-7.0.31
+       ./configure --prefix=$HOME/local
+       make
+       make install
+       cd ..
+
+Install makedepend in home, run 
+
+       wget https://downloads.sourceforge.net/project/makedepend/makedepend/makedepend-1.0.5.tar.gz
+       tar -xjf makedepend-1.0.5.tar.bz2
+       cd makedepend-1.0.5
+       ./configure --prefix=$HOME/local
+       make
+       make install
+       cd ..
+
+4. Once complete run 
+
+./gcom_helper.sh git
+
+then
+
+./gcom_helper.sh build
