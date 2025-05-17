@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
 
 # ───────── clone repos if missing ─────────
 clone() { [[ -d "$2/.git" ]] || git clone --depth 1 "$1" "$2"; }
-clone https://github.com/accel-sim/accel-sim-framework.git "$ACCELSIM_DIR"
+clone https://github.com/Wmoook/accel-sim-framework "$ACCELSIM_DIR"   #Current build that works 5/16/2025, in case it gets updated and something breaks
 clone https://github.com/mlcommons/inference.git            "$MLP_DIR"
 
 # ───────── build tracer (SM-75 patch) ────
